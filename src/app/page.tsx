@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white">
+    <main className="min-h-screen bg-white text-gray-900">
       {/* Navigation */}
       <Nav />
 
@@ -19,6 +19,9 @@ export default function Home() {
       {/* Results Section */}
       <Results />
 
+      {/* Testimonials Placeholder */}
+      <Testimonials />
+
       {/* CTA Section */}
       <CTA />
 
@@ -33,33 +36,33 @@ export default function Home() {
    ───────────────────────────────────────────── */
 function Nav() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-xl border-b border-white/5">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center">
-            <span className="text-black font-bold text-sm">R</span>
+        <a href="#" className="flex items-center gap-2.5">
+          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center">
+            <span className="text-white font-bold text-sm">R</span>
           </div>
-          <span className="font-semibold text-lg">
-            Ralph <span className="text-amber-400">AI</span>
+          <span className="font-semibold text-lg text-gray-900">
+            Ralph <span className="text-indigo-600">AI</span>
           </span>
         </a>
-        <div className="hidden md:flex items-center gap-8 text-sm text-zinc-400">
-          <a href="#problem" className="hover:text-white transition-colors">
+        <div className="hidden md:flex items-center gap-8 text-sm text-gray-500">
+          <a href="#problem" className="hover:text-gray-900 transition-colors">
             The Problem
           </a>
-          <a href="#services" className="hover:text-white transition-colors">
+          <a href="#services" className="hover:text-gray-900 transition-colors">
             Services
           </a>
-          <a href="#workflows" className="hover:text-white transition-colors">
+          <a href="#workflows" className="hover:text-gray-900 transition-colors">
             Workflows
           </a>
-          <a href="#results" className="hover:text-white transition-colors">
+          <a href="#results" className="hover:text-gray-900 transition-colors">
             Results
           </a>
         </div>
         <a
           href="#book"
-          className="bg-amber-500 hover:bg-amber-400 text-black font-medium px-5 py-2 rounded-lg text-sm transition-colors"
+          className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-5 py-2 rounded-xl text-sm transition-colors shadow-sm"
         >
           Book a Call
         </a>
@@ -73,25 +76,26 @@ function Nav() {
    ───────────────────────────────────────────── */
 function Hero() {
   return (
-    <section className="relative pt-32 pb-24 md:pt-44 md:pb-32 overflow-hidden grid-bg">
-      {/* Background glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none" />
+    <section className="relative pt-36 pb-28 md:pt-48 md:pb-36 overflow-hidden">
+      {/* Soft background wash */}
+      <div className="absolute inset-0 bg-gradient-to-b from-indigo-50/60 via-white to-white pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-indigo-100/50 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 rounded-full px-4 py-1.5 mb-8">
-          <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse-dot" />
-          <span className="text-amber-400 text-sm font-medium">
+        <div className="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-100 rounded-full px-4 py-1.5 mb-8">
+          <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse-dot" />
+          <span className="text-indigo-600 text-sm font-medium">
             Not another SaaS — a tailored AI deployment
           </span>
         </div>
 
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight max-w-5xl mx-auto">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight max-w-5xl mx-auto text-gray-900">
           The AI workforce for{" "}
           <span className="gradient-text">marketing agencies</span>
         </h1>
 
-        <p className="mt-6 text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+        <p className="mt-6 text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
           Deploy autonomous AI agents that monitor campaigns 24/7, automate
           reporting, and scale your agency — without hiring a single person.
         </p>
@@ -99,13 +103,13 @@ function Hero() {
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="#book"
-            className="bg-amber-500 hover:bg-amber-400 text-black font-semibold px-8 py-3.5 rounded-xl text-base transition-colors shadow-lg shadow-amber-500/20"
+            className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3.5 rounded-xl text-base transition-colors shadow-lg shadow-indigo-500/20"
           >
             Book a Free Discovery Call
           </a>
           <a
             href="#services"
-            className="border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white font-medium px-8 py-3.5 rounded-xl text-base transition-colors"
+            className="border border-gray-200 hover:border-gray-300 text-gray-600 hover:text-gray-900 font-medium px-8 py-3.5 rounded-xl text-base transition-colors bg-white"
           >
             See How It Works
           </a>
@@ -119,10 +123,10 @@ function Hero() {
             { value: "2-3×", label: "More clients, same team" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-amber-400">
+              <div className="text-2xl md:text-3xl font-bold text-indigo-600">
                 {stat.value}
               </div>
-              <div className="text-sm text-zinc-500 mt-1">{stat.label}</div>
+              <div className="text-sm text-gray-400 mt-1">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -163,17 +167,17 @@ function Problem() {
   ];
 
   return (
-    <section id="problem" className="py-24 md:py-32 bg-[#0d0d0d]">
+    <section id="problem" className="py-28 md:py-36 bg-gray-50/70">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-amber-400 font-medium text-sm uppercase tracking-wider mb-4">
+          <p className="text-indigo-600 font-medium text-sm uppercase tracking-wider mb-4">
             The Problem
           </p>
-          <h2 className="text-3xl md:text-5xl font-bold max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-bold max-w-3xl mx-auto text-gray-900">
             Your agency is buried in{" "}
             <span className="gradient-text">manual work</span>
           </h2>
-          <p className="mt-4 text-zinc-400 text-lg max-w-2xl mx-auto">
+          <p className="mt-4 text-gray-500 text-lg max-w-2xl mx-auto">
             Growing an agency shouldn&apos;t mean drowning in spreadsheets. But
             here you are.
           </p>
@@ -183,11 +187,11 @@ function Problem() {
           {painPoints.map((point) => (
             <div
               key={point.title}
-              className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6 card-hover"
+              className="bg-white ring-1 ring-gray-200 rounded-2xl p-7 card-hover"
             >
               <div className="text-2xl mb-3">{point.icon}</div>
-              <h3 className="text-lg font-semibold mb-2">{point.title}</h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">
+              <h3 className="text-lg font-semibold mb-2 text-gray-900">{point.title}</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">
                 {point.description}
               </p>
             </div>
@@ -255,17 +259,17 @@ function Services() {
   ];
 
   return (
-    <section id="services" className="py-24 md:py-32">
+    <section id="services" className="py-28 md:py-36">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-amber-400 font-medium text-sm uppercase tracking-wider mb-4">
+          <p className="text-indigo-600 font-medium text-sm uppercase tracking-wider mb-4">
             Services
           </p>
-          <h2 className="text-3xl md:text-5xl font-bold max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-bold max-w-3xl mx-auto text-gray-900">
             From discovery to{" "}
             <span className="gradient-text">full deployment</span>
           </h2>
-          <p className="mt-4 text-zinc-400 text-lg max-w-2xl mx-auto">
+          <p className="mt-4 text-gray-500 text-lg max-w-2xl mx-auto">
             Start with a free call. Prove ROI with a pilot. Scale with an
             ongoing partnership. Every step is risk-free.
           </p>
@@ -277,31 +281,31 @@ function Services() {
               key={tier.name}
               className={`relative rounded-2xl p-8 card-hover ${
                 tier.highlight
-                  ? "bg-gradient-to-b from-amber-500/10 to-amber-500/5 border-2 border-amber-500/30"
-                  : "bg-zinc-900/50 border border-zinc-800"
+                  ? "bg-gradient-to-b from-indigo-50 to-violet-50/50 ring-2 ring-indigo-200 shadow-lg shadow-indigo-100/50"
+                  : "bg-white ring-1 ring-gray-200"
               }`}
             >
               {tier.badge && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
                     {tier.badge}
                   </span>
                 </div>
               )}
 
               <div className="mb-6">
-                <h3 className="text-xl font-semibold mb-1">{tier.name}</h3>
+                <h3 className="text-xl font-semibold mb-1 text-gray-900">{tier.name}</h3>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-3xl font-bold text-amber-400">
+                  <span className="text-3xl font-bold text-indigo-600">
                     {tier.price}
                   </span>
-                  <span className="text-zinc-500 text-sm">
+                  <span className="text-gray-400 text-sm">
                     / {tier.duration}
                   </span>
                 </div>
               </div>
 
-              <p className="text-zinc-400 text-sm mb-6 leading-relaxed">
+              <p className="text-gray-500 text-sm mb-6 leading-relaxed">
                 {tier.description}
               </p>
 
@@ -309,10 +313,10 @@ function Services() {
                 {tier.features.map((feature) => (
                   <li
                     key={feature}
-                    className="flex items-start gap-3 text-sm text-zinc-300"
+                    className="flex items-start gap-3 text-sm text-gray-600"
                   >
                     <svg
-                      className="w-4 h-4 text-amber-400 mt-0.5 shrink-0"
+                      className="w-4 h-4 text-indigo-500 mt-0.5 shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth={2.5}
@@ -333,8 +337,8 @@ function Services() {
                 href="#book"
                 className={`block text-center font-medium py-3 rounded-xl transition-colors ${
                   tier.highlight
-                    ? "bg-amber-500 hover:bg-amber-400 text-black"
-                    : "bg-zinc-800 hover:bg-zinc-700 text-white"
+                    ? "bg-indigo-600 hover:bg-indigo-700 text-white shadow-sm"
+                    : "bg-gray-50 hover:bg-gray-100 text-gray-700 ring-1 ring-gray-200"
                 }`}
               >
                 {tier.cta}
@@ -492,17 +496,17 @@ function Workflows() {
   ];
 
   return (
-    <section id="workflows" className="py-24 md:py-32 bg-[#0d0d0d]">
+    <section id="workflows" className="py-28 md:py-36 bg-gray-50/70">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-amber-400 font-medium text-sm uppercase tracking-wider mb-4">
+          <p className="text-indigo-600 font-medium text-sm uppercase tracking-wider mb-4">
             Workflows
           </p>
-          <h2 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-bold max-w-4xl mx-auto text-gray-900">
             What your AI workforce{" "}
             <span className="gradient-text">actually does</span>
           </h2>
-          <p className="mt-4 text-zinc-400 text-lg max-w-2xl mx-auto">
+          <p className="mt-4 text-gray-500 text-lg max-w-2xl mx-auto">
             Production-ready autonomous agents, not fancy demos. Each workflow
             plugs into your existing tools and runs 24/7.
           </p>
@@ -512,21 +516,21 @@ function Workflows() {
           {workflows.map((wf) => (
             <div
               key={wf.title}
-              className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6 card-hover group"
+              className="bg-white ring-1 ring-gray-200 rounded-2xl p-7 card-hover group"
             >
-              <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-indigo-50 ring-1 ring-indigo-100 flex items-center justify-center text-indigo-500 mb-4">
                 {wf.icon}
               </div>
-              <h3 className="text-lg font-semibold mb-2">{wf.title}</h3>
-              <p className="text-zinc-400 text-sm leading-relaxed mb-4">
+              <h3 className="text-lg font-semibold mb-2 text-gray-900">{wf.title}</h3>
+              <p className="text-gray-500 text-sm leading-relaxed mb-4">
                 {wf.description}
               </p>
               <div className="flex items-center justify-between">
-                <span className="text-amber-400 text-xs font-semibold bg-amber-400/10 px-3 py-1 rounded-full">
+                <span className="text-indigo-600 text-xs font-semibold bg-indigo-50 px-3 py-1 rounded-full ring-1 ring-indigo-100">
                   {wf.savings}
                 </span>
-                <span className="flex items-center gap-1.5 text-xs text-emerald-400">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                <span className="flex items-center gap-1.5 text-xs text-emerald-600">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                   {wf.status}
                 </span>
               </div>
@@ -543,20 +547,17 @@ function Workflows() {
    ───────────────────────────────────────────── */
 function Results() {
   return (
-    <section id="results" className="py-24 md:py-32 relative overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-amber-500/8 rounded-full blur-[100px] pointer-events-none" />
-
+    <section id="results" className="py-28 md:py-36 relative overflow-hidden section-gradient-soft">
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-amber-400 font-medium text-sm uppercase tracking-wider mb-4">
+          <p className="text-indigo-600 font-medium text-sm uppercase tracking-wider mb-4">
             The Math
           </p>
-          <h2 className="text-3xl md:text-5xl font-bold max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-bold max-w-3xl mx-auto text-gray-900">
             The ROI is{" "}
             <span className="gradient-text">undeniable</span>
           </h2>
-          <p className="mt-4 text-zinc-400 text-lg max-w-2xl mx-auto">
+          <p className="mt-4 text-gray-500 text-lg max-w-2xl mx-auto">
             We don&apos;t ask you to take our word for it. The numbers speak for
             themselves.
           </p>
@@ -565,87 +566,87 @@ function Results() {
         {/* Value cards */}
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
           {/* Driver 1: Capacity */}
-          <div className="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-8 glow-amber">
-            <div className="text-amber-400 font-semibold text-sm uppercase tracking-wider mb-4">
+          <div className="bg-white ring-1 ring-gray-200 rounded-2xl p-8 shadow-sm">
+            <div className="text-indigo-600 font-semibold text-sm uppercase tracking-wider mb-4">
               Immediate Value — Capacity
             </div>
             <div className="space-y-4">
-              <div className="flex justify-between items-center py-3 border-b border-zinc-800">
-                <span className="text-zinc-400">Manual hours saved</span>
-                <span className="font-semibold text-white">40 hrs/week</span>
+              <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                <span className="text-gray-500">Manual hours saved</span>
+                <span className="font-semibold text-gray-900">40 hrs/week</span>
               </div>
-              <div className="flex justify-between items-center py-3 border-b border-zinc-800">
-                <span className="text-zinc-400">At agency rate of</span>
-                <span className="font-semibold text-white">$50/hr</span>
+              <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                <span className="text-gray-500">At agency rate of</span>
+                <span className="font-semibold text-gray-900">$50/hr</span>
               </div>
-              <div className="flex justify-between items-center py-3 border-b border-zinc-800">
-                <span className="text-zinc-400">Weekly value</span>
-                <span className="font-semibold text-white">$2,000</span>
+              <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                <span className="text-gray-500">Weekly value</span>
+                <span className="font-semibold text-gray-900">$2,000</span>
               </div>
               <div className="flex justify-between items-center py-3">
-                <span className="text-zinc-300 font-medium">
+                <span className="text-gray-700 font-medium">
                   Monthly value to your agency
                 </span>
-                <span className="text-2xl font-bold text-amber-400">
+                <span className="text-2xl font-bold text-indigo-600">
                   $8,000
                 </span>
               </div>
             </div>
-            <div className="mt-6 text-sm text-zinc-500">
+            <div className="mt-6 text-sm text-gray-400">
               You pay $3-5K/month → clear positive ROI from day one
             </div>
           </div>
 
           {/* Driver 2: Performance */}
-          <div className="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-8">
-            <div className="text-amber-400 font-semibold text-sm uppercase tracking-wider mb-4">
+          <div className="bg-white ring-1 ring-gray-200 rounded-2xl p-8 shadow-sm">
+            <div className="text-indigo-600 font-semibold text-sm uppercase tracking-wider mb-4">
               Long-Term Value — Performance
             </div>
             <div className="space-y-4">
-              <div className="flex justify-between items-center py-3 border-b border-zinc-800">
-                <span className="text-zinc-400">Client monthly ad spend</span>
-                <span className="font-semibold text-white">$50K</span>
+              <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                <span className="text-gray-500">Client monthly ad spend</span>
+                <span className="font-semibold text-gray-900">$50K</span>
               </div>
-              <div className="flex justify-between items-center py-3 border-b border-zinc-800">
-                <span className="text-zinc-400">ROAS improvement</span>
-                <span className="font-semibold text-white">10-20%</span>
+              <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                <span className="text-gray-500">ROAS improvement</span>
+                <span className="font-semibold text-gray-900">10-20%</span>
               </div>
-              <div className="flex justify-between items-center py-3 border-b border-zinc-800">
-                <span className="text-zinc-400">
+              <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                <span className="text-gray-500">
                   Incremental revenue per client
                 </span>
-                <span className="font-semibold text-white">$5-10K/mo</span>
+                <span className="font-semibold text-gray-900">$5-10K/mo</span>
               </div>
               <div className="flex justify-between items-center py-3">
-                <span className="text-zinc-300 font-medium">
+                <span className="text-gray-700 font-medium">
                   Across 40 clients
                 </span>
-                <span className="text-2xl font-bold text-amber-400">
+                <span className="text-2xl font-bold text-indigo-600">
                   $30-80K/mo
                 </span>
               </div>
             </div>
-            <div className="mt-6 text-sm text-zinc-500">
+            <div className="mt-6 text-sm text-gray-400">
               Better results per client = higher retention + premium pricing
             </div>
           </div>
         </div>
 
         {/* Comparison row */}
-        <div className="max-w-4xl mx-auto bg-zinc-900/40 border border-zinc-800 rounded-2xl p-8">
-          <h3 className="text-xl font-semibold text-center mb-8">
+        <div className="max-w-4xl mx-auto bg-white ring-1 ring-gray-200 rounded-2xl p-8 shadow-sm">
+          <h3 className="text-xl font-semibold text-center mb-8 text-gray-900">
             Ralph AI vs. the alternatives
           </h3>
           <div className="grid grid-cols-4 gap-4 text-sm">
             {/* Header */}
-            <div className="text-zinc-500" />
-            <div className="text-center font-semibold text-amber-400">
+            <div className="text-gray-400" />
+            <div className="text-center font-semibold text-indigo-600">
               Ralph AI
             </div>
-            <div className="text-center font-semibold text-zinc-400">
+            <div className="text-center font-semibold text-gray-400">
               Hire Analyst
             </div>
-            <div className="text-center font-semibold text-zinc-400">
+            <div className="text-center font-semibold text-gray-400">
               SaaS Tools
             </div>
 
@@ -658,16 +659,16 @@ function Results() {
               ["Integrates full stack", "✓", "✗", "✗"],
             ].map(([label, ralph, hire, saas]) => (
               <div key={label} className="contents">
-                <div className="text-zinc-400 py-3 border-t border-zinc-800">
+                <div className="text-gray-500 py-3 border-t border-gray-100">
                   {label}
                 </div>
-                <div className="text-center py-3 border-t border-zinc-800 text-white font-medium">
+                <div className="text-center py-3 border-t border-gray-100 text-gray-900 font-medium">
                   {ralph}
                 </div>
-                <div className="text-center py-3 border-t border-zinc-800 text-zinc-500">
+                <div className="text-center py-3 border-t border-gray-100 text-gray-400">
                   {hire}
                 </div>
-                <div className="text-center py-3 border-t border-zinc-800 text-zinc-500">
+                <div className="text-center py-3 border-t border-gray-100 text-gray-400">
                   {saas}
                 </div>
               </div>
@@ -680,19 +681,94 @@ function Results() {
 }
 
 /* ─────────────────────────────────────────────
+   TESTIMONIALS SECTION (Placeholder)
+   ───────────────────────────────────────────── */
+function Testimonials() {
+  const testimonials = [
+    {
+      quote:
+        "Ralph AI transformed how we handle campaign monitoring. What used to take our team hours every morning now happens automatically — and we catch issues before clients even notice.",
+      name: "Coming Soon",
+      role: "Agency Owner",
+      company: "Digital Agency",
+    },
+    {
+      quote:
+        "The automated reporting alone saved us 15 hours a week. We reinvested that time into strategy and took on 8 new clients in the first quarter.",
+      name: "Coming Soon",
+      role: "Operations Director",
+      company: "Performance Agency",
+    },
+    {
+      quote:
+        "We tried three different SaaS tools before Ralph AI. The difference is night and day — it's built for how our agency actually works, not some generic template.",
+      name: "Coming Soon",
+      role: "Founder",
+      company: "Growth Agency",
+    },
+  ];
+
+  return (
+    <section className="py-28 md:py-36 bg-gray-50/70">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <p className="text-indigo-600 font-medium text-sm uppercase tracking-wider mb-4">
+            Testimonials
+          </p>
+          <h2 className="text-3xl md:text-5xl font-bold max-w-3xl mx-auto text-gray-900">
+            What our clients{" "}
+            <span className="gradient-text">say</span>
+          </h2>
+          <p className="mt-4 text-gray-500 text-lg max-w-2xl mx-auto">
+            Real agencies, real results. Here&apos;s what working with Ralph AI looks like.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {testimonials.map((t, i) => (
+            <div
+              key={i}
+              className="bg-white ring-1 ring-gray-200 rounded-2xl p-7 card-hover flex flex-col"
+            >
+              {/* Quote icon */}
+              <svg
+                className="w-8 h-8 text-indigo-200 mb-4 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+              </svg>
+              <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-1">
+                &ldquo;{t.quote}&rdquo;
+              </p>
+              <div className="border-t border-gray-100 pt-4">
+                <div className="font-semibold text-sm text-gray-900">{t.name}</div>
+                <div className="text-xs text-gray-400">
+                  {t.role} · {t.company}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────────────────────────────────
    CTA SECTION
    ───────────────────────────────────────────── */
 function CTA() {
   return (
-    <section id="book" className="py-24 md:py-32 bg-[#0d0d0d] relative overflow-hidden">
-      {/* Glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-amber-500/10 rounded-full blur-[100px] pointer-events-none" />
+    <section id="book" className="py-28 md:py-36 relative overflow-hidden">
+      {/* Soft background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-indigo-50/40 to-white pointer-events-none" />
 
       <div className="relative max-w-3xl mx-auto px-6 text-center">
-        <div className="bg-zinc-900/60 border border-zinc-800 rounded-3xl p-12 md:p-16 glow-amber">
-          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center mx-auto mb-6">
+        <div className="bg-white ring-1 ring-gray-200 rounded-3xl p-12 md:p-16 shadow-lg shadow-indigo-100/30">
+          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center mx-auto mb-6">
             <svg
-              className="w-8 h-8 text-black"
+              className="w-8 h-8 text-white"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={2}
@@ -706,10 +782,10 @@ function CTA() {
             </svg>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
             Ready to scale your agency?
           </h2>
-          <p className="text-zinc-400 text-lg mb-8 max-w-lg mx-auto">
+          <p className="text-gray-500 text-lg mb-8 max-w-lg mx-auto">
             Book a free 30-minute discovery call. We&apos;ll map your workflows,
             identify automation opportunities, and show you exactly what Ralph
             can save you. No pitch, no pressure.
@@ -719,7 +795,7 @@ function CTA() {
             href="https://calendly.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-semibold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg shadow-amber-500/25"
+            className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg shadow-indigo-500/20"
           >
             Book a Free Discovery Call
             <svg
@@ -737,7 +813,7 @@ function CTA() {
             </svg>
           </a>
 
-          <p className="text-zinc-600 text-sm mt-4">
+          <p className="text-gray-400 text-sm mt-4">
             No commitment · 30 minutes · 100% free
           </p>
         </div>
@@ -751,43 +827,43 @@ function CTA() {
    ───────────────────────────────────────────── */
 function Footer() {
   return (
-    <footer className="border-t border-zinc-800 py-12">
+    <footer className="border-t border-gray-100 py-12 bg-gray-50/50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center">
-              <span className="text-black font-bold text-xs">R</span>
+          <div className="flex items-center gap-2.5">
+            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center">
+              <span className="text-white font-bold text-xs">R</span>
             </div>
-            <span className="font-semibold">
-              Ralph <span className="text-amber-400">AI</span>
+            <span className="font-semibold text-gray-900">
+              Ralph <span className="text-indigo-600">AI</span>
             </span>
           </div>
 
           {/* Links */}
-          <div className="flex items-center gap-8 text-sm text-zinc-500">
-            <a href="#problem" className="hover:text-zinc-300 transition-colors">
+          <div className="flex items-center gap-8 text-sm text-gray-400">
+            <a href="#problem" className="hover:text-gray-600 transition-colors">
               The Problem
             </a>
-            <a href="#services" className="hover:text-zinc-300 transition-colors">
+            <a href="#services" className="hover:text-gray-600 transition-colors">
               Services
             </a>
-            <a href="#workflows" className="hover:text-zinc-300 transition-colors">
+            <a href="#workflows" className="hover:text-gray-600 transition-colors">
               Workflows
             </a>
-            <a href="#results" className="hover:text-zinc-300 transition-colors">
+            <a href="#results" className="hover:text-gray-600 transition-colors">
               Results
             </a>
           </div>
 
           {/* Copyright */}
-          <p className="text-zinc-600 text-sm">
+          <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} Ralph AI. All rights reserved.
           </p>
         </div>
 
         <div className="mt-8 text-center">
-          <p className="text-zinc-700 text-xs">
+          <p className="text-gray-300 text-xs">
             AI workforce solutions for marketing agencies. Sydney, Australia.
           </p>
         </div>
